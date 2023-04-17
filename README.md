@@ -1,70 +1,107 @@
-# Getting Started with Create React App
+# Recipes App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 📌 Technologies Used
 
-## Available Scripts
+* HTML
+* CSS
+* Javascript 
+* React
+* VScode
 
-In the project directory, you can run:
+## 📌 Description
 
-### `npm start`
+This is a front-end website build with HTML, CSS, Javascript and React that helps one to cook a food by showing recipes and ingredients of the food.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<h1> Contributing Guidelines </h1>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Basics of Git and GitHub
 
-### `npm test`
+### Git & GitHub
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Before we proceed, it's better to know the difference between Git and Github. Git is a version control system (VCS) that allows us to keep track of the history of our source code , whereas GitHub is a service that hosts Git projects. 
 
-### `npm run build`
+We assume you have created an account on Github and installed Git on your System.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Now enter your name and E-mail (used on Github) address in Git, by using following command.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+`$ git config --global user.name "YOUR NAME"`
+` $ git config --global user.email "YOUR EMAIL ADDRESS"`
+This is an important step to mark your commits to your name and email.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<br />
 
-### `npm run eject`
+### Fork a project
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+You can make a copy of the project to your account. This process is called forking a project to your Github account. On Upper right side of project page on Github, you can see -
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<p align="center">  <img  src="https://i.imgur.com/P0n6f97.png">  </p>
+Click on fork to create a copy of project to your account. This creates a separate copy for you to work on.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<br />
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<br />
 
-## Learn More
+### Clone the forked project
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+You have forked the project you want to contribute to your github account. To get this project on your development machine we use clone command of git.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+`$ git clone https://github.com/Amritanshu02/Recipes-App` <br/>
+Now you have the project on your local machine.
 
-### Code Splitting
+<br />
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Add a remote (upstream) to original project repository
 
-### Analyzing the Bundle Size
+Remote means the remote location of project on Github. By cloning, we have a remote called origin which points to your forked repository. Now we will add a remote to the original repository from where we had forked.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+`$ cd <your-forked-project-folder>`
+`$ git remote add upstream https://github.com/Amritanshu02/Recipes-App` <br/>
+You will see the benefits of adding remote later.
 
-### Making a Progressive Web App
+<br />
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Synchronizing your fork
 
-### Advanced Configuration
+Open Source projects have a number of contributors who can push code anytime. So it is necessary to make your forked copy equal with the original repository. The remote added above called Upstream helps in this.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+`$ git checkout main`
+`$ git fetch upstream`
+`$ git merge upstream/main`
+`$ git push origin main` <br/>
+The last command pushes the latest code to your forked repository on Github. The origin is the remote pointing to your forked repository on github.
 
-### Deployment
+<br />
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Create a new branch for a feature or bugfix
 
-### `npm run build` fails to minify
+Usually, all repositories have a main branch that is regarded to be stable, and any new features should be developed on a separate branch before being merged into the main branch. As a result, we should establish a new branch for our feature or bugfix and go to work on the issue. 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+`$ git checkout -b <feature-branch>`
+This will create a new branch out of master branch. Now start working on the problem and commit your changes.
+
+`$ git add --all`
+`$ git commit -m "<commit message>"`
+The first command adds all the files or you can add specific files by removing -a and adding the file names. The second command gives a message to your changes so you can know in future what changes this commit makes. If you are solving an issue on original repository, you should add the issue number like #35 to your commit message. This will show the reference to commits in the issue.
+
+<br />
+
+### Push code and create a pull request
+
+You now have a new branch containing the modifications you want in the project you forked. Now, push your new branch to your remote github fork. 
+
+`$ git push origin main`
+Now you are ready to help the project by opening a pull request means you now tell the project managers to add the feature or bug fix to original repository. You can open a pull request by clicking on green icon -
+
+<p align="center">  <img  src="https://i.imgur.com/aGaqAD5.png">  </p>
+
+Remember your upstream base branch should be main and source should be your feature branch. Click on create pull request and add a name to your pull request. You can also describe your feature.
+
+Congratulations! You've already made your first contribution.🥳
+
+Good Luck for your journey
+
+
+
+© 2023 Amritanshu
+
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
