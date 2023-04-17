@@ -24,7 +24,7 @@ function Search() {
 }
 
 const FormStyle = styled.form`
-    margin: 0rem 9rem;
+    margin: 0rem 7rem;
     
     div{
         width: 100%;
@@ -51,9 +51,12 @@ const FormStyle = styled.form`
         color: white;
     }
 
+    @media (max-width: 1200px) and (min-width: 769px) {
+        margin: 0rem 3rem;
+    }
     @media (max-width: 768px) {
-        margin: 0rem 5rem;
+        margin: 0rem 1rem;
     }
 `;
 
-export default Search
+export default Search;

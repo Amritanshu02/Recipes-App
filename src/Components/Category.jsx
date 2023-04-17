@@ -30,6 +30,10 @@ const List = styled.div`
     display: flex;
     justify-content: center;
     margin: 2rem;
+
+    @media (max-width: 768px) {
+        margin: 10px;
+    }
 `;
 
 const SLink = styled(NavLink)`
@@ -65,6 +69,20 @@ const SLink = styled(NavLink)`
 
         h4{
             color: white;
+        }
+    }
+
+    @media (max-width: 768px) {
+        margin-right: 10px;
+
+        h4{
+        color: white;
+        font-size: 1rem;
+        }
+
+        svg{
+            color: white;
+            font-size: 1.5rem;
         }
     }
 `;
